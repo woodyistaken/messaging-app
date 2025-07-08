@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+user1=User.create(email: "a@b", password: "123456")
+user2=User.create(email: "b@a", password: "123456")
+user1.friends.push(user2)
+user2.friends.push(user1)
+
+friendship=user2.friendships.where(friended: user1).take
+friendship.status="accepted"
+friendship.save
+otherFriendship=Friendship.where(friender: user1, friended: user2).take
+otherFriendship.status="accepted"
+otherFriendship.save
