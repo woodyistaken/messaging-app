@@ -1,0 +1,96 @@
+*{
+  --searchFontSize:2rem
+}
+
+.body{
+  background-color: grey;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  box-sizing: border-box;
+}
+.header{
+  background-color: lightgrey;
+  padding:10px;
+  display:flex;
+  gap:100px;
+  align-items: center;
+}
+.links{
+  text-decoration: none;
+  color:rgb(68, 68, 68);
+  font-size:2rem;
+  margin:10px 20px;
+}
+.links:hover{
+  text-decoration: none;
+  color:rgb(119, 119, 119);
+}
+.searchPanel{
+  margin:30px;
+  display:flex;
+}
+.searchBox{
+  font-size:var(--searchFontSize);
+  padding:10px;
+  flex:1;
+  border-radius: 10px;
+}
+.searchButton{
+  font-size:var(--searchFontSize);
+  padding:10px 16px;
+  margin-left:10px;
+  border-radius: 10px;
+}
+
+.list{
+  flex:1;
+  background-color: white;
+  margin:10px 0px;
+  font-size:5rem;
+  text-align: center;
+}
+.user{
+  background-color: lightgrey;
+  margin:5px;
+  padding:8px 16px;
+  border-radius: 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.button{
+  padding:8px 16px;
+  
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+  border-radius: 10px;
+  font-size:1.2rem;
+}
+.pendingButton{
+  composes:button;
+  color:rgb(145, 145, 145);
+  background-color: black;
+}
+.acceptedButton{
+  composes:button;
+  color:white;
+  background-color: green;
+}
+.requestButton{
+  composes:button;
+  color:white;
+  background-color: grey;
+}
+.requestButton:hover{
+  background-color: rgb(153, 153, 153);
+}
+.userText{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:300px;
+  font-size:1.2rem;
+}

@@ -19,3 +19,6 @@ friendship.save
 otherFriendship=Friendship.where(friender: user1, friended: user2).take
 otherFriendship.status="accepted"
 otherFriendship.save
+
+Message.create(sender: user1, receiver: user2, message: "Message from user1 to user2")
+Message.create(sender: user2, receiver: user1, message: "Message from user2 to user1")

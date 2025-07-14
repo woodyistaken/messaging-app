@@ -1,0 +1,38 @@
+.container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size:1rem;
+  height:100vh;
+  box-sizing: border-box;
+  background-color: lightslategray;
+}
+.error{
+  background-color: rgb(255, 152, 152);
+}
+.textContainer{
+  background-color: lightgrey;
+  padding:10px;
+  border:2px solid black;
+  border-radius: 10px;
+}
+.header{
+  margin-bottom:10px;
+}
+
+.input{
+  margin-bottom:8px;  
+}
+
+.paragraph{
+  margin-bottom:8px;  
+}
+
+input:invalid{
+  border:1px solid red;
+}
+.button{
+  padding:4px 8px;
+  margin:10px 0px;
+}

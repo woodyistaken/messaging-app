@@ -1,0 +1,187 @@
+.container{
+  height:100vh;
+  background-color: lightslategray;
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.header{
+  background-color: lightgrey;
+  padding:10px;
+  display:flex;
+  gap:100px;
+  margin-bottom:20px;
+  align-items: center;
+}
+.links{
+  text-decoration: none;
+  color:rgb(68, 68, 68);
+  font-size:1.5rem;
+}
+.links:hover{
+  text-decoration: none;
+  color:rgb(119, 119, 119);
+}
+.greeting{
+  color:rgb(255, 255, 255);
+  margin:10px;
+}
+.content{
+  display:flex;
+  padding:20px;
+  gap:50px;
+  flex:1;
+  box-sizing: border-box;
+  align-items:stretch;
+}
+.messagesContainer{
+  display:grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 20px 1fr ;
+  row-gap:20px;
+  flex:1;
+}
+.friendsContainer{
+  flex:1;
+  display:flex;
+  flex-direction: column ;
+}
+.messagesDashboard{
+  grid-column:1/-1;
+  grid-row:2;
+  display:flex;
+  margin:10px 0px;
+}
+.messageTitle{
+  grid-row:1;
+  grid-column: 2;
+}
+.messages{
+  flex:10;
+  height:100%;
+  background-color: white;
+  z-index: 2;
+}
+.message{
+  background-color: lightgrey;
+  margin:5px;
+  padding:8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.messageText{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:300px;
+}
+.messagePerson{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:200px;
+
+}
+.message:hover{
+  transform: scale(1.03);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507);
+  z-index:1;
+}
+.messageButtons{
+  display:flex;
+  flex-direction: column;
+  flex:1;
+}
+.messageBtn{
+  font-size: 1rem;
+  padding:10px;
+  background-color:rgb(126, 126, 126);
+  border:none;
+  cursor: pointer;
+}
+.activatedBtn{
+  background-color:rgb(255, 255, 255);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.678);
+  z-index: 1;
+}
+.dialogBackdrop{
+  background-color: rgba(0, 0, 0, 0.479);
+  z-index:10;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.messageDialog{
+  opacity:1;
+  background-color: white;
+  width:75%;
+  height:75%;
+  padding:10px;
+  box-sizing: border-box;
+}
+.messageDialog h4{
+  margin-bottom:20px;
+}
+.messageDialogHeader{
+  display:flex;
+  justify-content: end;
+  background-color: lightgrey;
+  padding:8px 10px;
+  margin-bottom:10px;
+}
+.messageDialogHeader button{
+  color:white;
+  background-color: red;
+  padding:8px 10px;
+  border:none;
+  cursor:pointer;
+}
+.friends{
+  flex:1;
+  background-color: white;
+  margin:10px 0px;
+}
+.friend{
+  background-color: lightgrey;
+  margin:5px;
+  padding:8px 16px;
+  border-radius: 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button{
+  padding:8px 16px;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+  border-radius: 10px;
+}
+.unfriendButton{
+  composes:button;
+  color:white;
+  background-color: red;
+}
+.unfriendButton:hover{
+  background-color: rgb(240, 0, 0);
+}
+.acceptButton{
+  composes:button;
+  color:white;
+  background-color: green;
+}
+.acceptButton:hover{
+  background-color: lightgreen;
+}
+.friendText{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:300px;
+}
