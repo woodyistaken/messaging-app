@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "messages", to: "messages#get_user"
     get "messages/sent", to: "messages#get_sent_messages"
     get "messages/received", to: "messages#get_received_messages"
+    post "messages/send", to: "messages#send_message"
     get "friends", to: "friends#index"
     post "friends/delete/:id", to: "friends#delete"
     post "friends/add/:id", to: "friends#create"

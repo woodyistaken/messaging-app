@@ -18,4 +18,13 @@ class Api::MessagesController < ApplicationController
     end
     render json: { messages: messages }
   end
+  def send_message
+    info=send_message_params
+    Message.create(sender: current_user, receiver: User.find(info[:to]), message: info[:message])
+    render json: {}
+  end
+  private
+  def send_message_params
+    params.permit(:message, :to)
+  end
 end

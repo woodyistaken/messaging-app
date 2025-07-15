@@ -58,7 +58,6 @@ export default function Profile(){
       return res.json()
     })
     .then((res)=>{
-      console.log(res)
       setFriends(res.friends)
     })
   }
@@ -150,7 +149,7 @@ export default function Profile(){
     <div className={style.header}>
       <h1 className={style.greeting}>Hello, {user}</h1>
       <Link className={style.links} to="findFriends"> Find Friends</Link>
-      <Link className={style.links}>Send Message</Link>
+      <Link className={style.links} to="send">Send Message</Link>
       <a className={style.links} onClick={editUser} href="">Edit User</a>
       <a className={style.links} onClick={signOut} href="">Sign out</a>
     </div>

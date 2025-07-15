@@ -5,6 +5,7 @@ import SignUpPortal from "../components/SignUpPortal";
 import SignInPortal from "../components/SignInPortal";
 import EditUserPortal from "../components/EditUserPortal";
 import FindFriendPortal from "../components/FindFriendPortal";
+import SendMessagePortal from "../components/SendMessagePortal";
 
 export default (
   <Router>
@@ -14,6 +15,7 @@ export default (
       <Route path="/sign_in" element={<SignInPortal />} />
       <Route path="/edit" element={<EditUserPortal />} />
       <Route path="/findFriends" element={<FindFriendPortal />} />
+      <Route path="/send" element={<SendMessagePortal />} />
     </Routes>
   </Router>
 );

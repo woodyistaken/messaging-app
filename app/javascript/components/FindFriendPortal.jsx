@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect,useState } from "react";
 import style from "./FindFriendPortal.module.css"
 import { Link } from "react-router-dom";
-
+import HeaderSub from "./HeaderSub";
 
 export default function FindFriendPortal(){
   const [searchBoxValue,setSearchBoxValue]=useState("")
@@ -69,7 +69,7 @@ export default function FindFriendPortal(){
 
 
   return <div className={style.body}>
-    <div className={style.header}><Link className={style.links} to="/">Profile</Link></div>
+    <HeaderSub/>
     <div className={style.searchPanel}><input value={searchBoxValue} onChange={(e)=>{setSearchBoxValue(e.target.value)}} className={style.searchBox} placeholder="Search..."></input><button onClick={getUsers} className={style.searchButton}>Search</button></div>
     <div className={style.list}>
       {
